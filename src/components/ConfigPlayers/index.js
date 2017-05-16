@@ -5,6 +5,26 @@ import './styles.css'
 class ConfigPlayers extends React.Component {
   constructor(props) {
     super(props)
+
+    this.state = {
+      player_1: {
+        name: '',
+      },
+      player_2: {
+        name: '',
+      }
+    }
+
+    this._Player1NameOnChange = this._Player1NameOnChange.bind(this)
+    this._Player2NameOnChange = this._Player2NameOnChange.bind(this)
+  }
+
+  _Player1NameOnChange(e) {
+    this.setState({ player_1: { name: e.target.value } })
+  }
+
+  _Player2NameOnChange(e) {
+    this.setState({ player_2: { name: e.target.value } })
   }
 
   render() {
@@ -20,11 +40,12 @@ class ConfigPlayers extends React.Component {
               Player 1
             </label>
             <input
-              autofocus
               className='ConfigPlayers__input-text'
               id='player1-name'
+              onChange={this._Player1NameOnChange}
               placeholder="Player 1's name"
               type='text'
+              value={this.state.player_1.name}
             />
           </div>
           <div className='ConfigPlayers__section'>
@@ -37,8 +58,10 @@ class ConfigPlayers extends React.Component {
             <input
               className='ConfigPlayers__input-text'
               id='player2-name'
+              onChange={this._Player2NameOnChange}
               placeholder="Player 2's name"
               type='text'
+              value={this.state.player_2.name}
             />
           </div>
           <div className='ConfigPlayers__section'>
