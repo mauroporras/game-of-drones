@@ -1,6 +1,7 @@
 .ConfigPlayers {
-  margin: 1rem;
+  margin: 0 1rem 2rem;
   padding: 1rem;
+  padding-top: 1.5rem;
 }
 
 .ConfigPlayers__legend {

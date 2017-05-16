@@ -1,4 +1,5 @@
 .SecondaryTitle {
   color: var(--color-dark-gray);
+  margin: 0 0 2rem;
   text-align: center;
 }
