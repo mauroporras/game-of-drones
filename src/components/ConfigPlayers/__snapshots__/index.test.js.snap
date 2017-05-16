@@ -1,0 +1,51 @@
+exports[`test Component renders correctly 1`] = `
+<fieldset
+  className="ConfigPlayers">
+  <legend
+    className="ConfigPlayers__legend">
+    Configure Players
+  </legend>
+  <form
+    onSubmit={[Function]}>
+    <div
+      className="ConfigPlayers__section">
+      <label
+        className="ConfigPlayers__label"
+        htmlFor="player1-name">
+        Player 1
+      </label>
+      <input
+        className="ConfigPlayers__input-text"
+        id="player1-name"
+        onChange={[Function]}
+        placeholder="Player 1\'s name"
+        required={true}
+        type="text"
+        value="" />
+    </div>
+    <div
+      className="ConfigPlayers__section">
+      <label
+        className="ConfigPlayers__label"
+        htmlFor="player2-name">
+        Player 2
+      </label>
+      <input
+        className="ConfigPlayers__input-text"
+        id="player2-name"
+        onChange={[Function]}
+        placeholder="Player 2\'s name"
+        required={true}
+        type="text"
+        value="" />
+    </div>
+    <div
+      className="ConfigPlayers__section">
+      <button
+        type="submit">
+        Play!
+      </button>
+    </div>
+  </form>
+</fieldset>
+`;

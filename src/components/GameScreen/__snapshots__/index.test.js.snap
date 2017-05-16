@@ -1,0 +1,29 @@
+exports[`test Component renders the correct children 1`] = `
+<div>
+  <header>
+    <h1
+      className="PrimaryTitle">
+      Game of Drones
+    </h1>
+    <h2
+      className="SecondaryTitle" />
+  </header>
+  <main>
+    <div>
+      Game on!
+    </div>
+  </main>
+  <footer
+    className="Footer">
+    <p>
+      Play fair, have fun!
+    </p>
+    <p>
+      <a
+        href="https://github.com/mauroporrasp/game-of-drones">
+        Github repo
+      </a>
+    </p>
+  </footer>
+</div>
+`;

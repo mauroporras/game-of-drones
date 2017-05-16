@@ -1,6 +1,8 @@
 :root {
-  --color-black: #263238;
-  --color-dark-gray: #37474F;
+  --color-black: #212121;
+  --color-dark-gray: #424242;
+  --color-gray: #616161;
+  --color-light-gray: #757575;
 
   --font-main: 'Roboto Slab', serif;
 }

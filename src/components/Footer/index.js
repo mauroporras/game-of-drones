@@ -4,7 +4,12 @@ import './styles.css'
 
 const Footer = () => (
   <footer className='Footer'>
-    Play fair, have fun!
+    <p>
+      Play fair, have fun!
+    </p>
+    <p>
+      <a href="https://github.com/mauroporrasp/game-of-drones">Github repo</a>
+    </p>
   </footer>
 )
 

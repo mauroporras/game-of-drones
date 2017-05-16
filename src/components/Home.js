@@ -1,9 +1,14 @@
 import React from 'react'
 
 import GameScreen from './GameScreen/'
+import ConfigPlayers from './ConfigPlayers/';
 
-const Home = () => (
+const Home = props => (
   <GameScreen title='New Game'>
+    <ConfigPlayers
+      onSubmit={config => props.history.push('/play')}
+    >
+    </ConfigPlayers>
   </GameScreen>
 )
 
