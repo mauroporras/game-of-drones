@@ -22,6 +22,7 @@ class ConfigPlayers extends React.Component {
 
   _onSubmit(e) {
     e.preventDefault()
+    this.props.onSubmit()
   }
 
   _onChangePlayer1Name(e) {
@@ -30,6 +31,10 @@ class ConfigPlayers extends React.Component {
 
   _onChangePlayer2Name(e) {
     this.setState({ player_2: { name: e.target.value } })
+  }
+
+  componentDidMount() {
+    this.toFocus.focus()
   }
 
   render() {
@@ -49,6 +54,7 @@ class ConfigPlayers extends React.Component {
               id='player1-name'
               onChange={this._onChangePlayer1Name}
               placeholder="Player 1's name"
+              ref={input => this.toFocus = input}
               type='text'
               value={this.state.player_1.name}
             />

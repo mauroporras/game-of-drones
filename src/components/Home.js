@@ -5,7 +5,10 @@ import ConfigPlayers from './ConfigPlayers/';
 
 const Home = () => (
   <GameScreen title='New Game'>
-    <ConfigPlayers></ConfigPlayers>
+    <ConfigPlayers
+      onSubmit={() => console.info('foo')}
+    >
+    </ConfigPlayers>
   </GameScreen>
 )
 
