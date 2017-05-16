@@ -26,11 +26,11 @@ class ConfigPlayers extends React.Component {
   }
 
   _onChangePlayer1Name(e) {
-    this.setState({ player_1: { name: e.target.value } })
+    this.setState({ player_1: { name: e.target.value.trim() } })
   }
 
   _onChangePlayer2Name(e) {
-    this.setState({ player_2: { name: e.target.value } })
+    this.setState({ player_2: { name: e.target.value.trim() } })
   }
 
   componentDidMount() {
@@ -55,6 +55,7 @@ class ConfigPlayers extends React.Component {
               onChange={this._onChangePlayer1Name}
               placeholder="Player 1's name"
               ref={input => this.toFocus = input}
+              required
               type='text'
               value={this.state.player_1.name}
             />
@@ -71,6 +72,7 @@ class ConfigPlayers extends React.Component {
               id='player2-name'
               onChange={this._onChangePlayer2Name}
               placeholder="Player 2's name"
+              required
               type='text'
               value={this.state.player_2.name}
             />
