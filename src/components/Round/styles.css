@@ -1,0 +1,10 @@
+.Round {
+  border: 0.1rem solid green;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.Round__moves {
+  display: flex;
+  justify-content: space-around;
+}

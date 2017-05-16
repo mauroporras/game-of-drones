@@ -3,8 +3,8 @@ import React from 'react'
 import './styles.css'
 
 const PlayerMove = props => (
-  <div>
-    <p>{props.playerName}</p>
+  <div className='PlayerMove'>
+    <strong className='PlayerMove__player-name'>{props.player.name}</strong>
   </div>
 )
 

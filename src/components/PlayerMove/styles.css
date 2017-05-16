@@ -1,0 +1,10 @@
+.PlayerMove__player-name {
+  display: block;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.PlayerMove {
+  border: 0.1rem solid black;
+  width: 45%;
+}

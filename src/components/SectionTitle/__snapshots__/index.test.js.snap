@@ -1,0 +1,6 @@
+exports[`test Component renders the correct text 1`] = `
+<h3
+  className="SectionTitle">
+  Hello
+</h3>
+`;
