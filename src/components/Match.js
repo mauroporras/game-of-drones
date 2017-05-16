@@ -32,14 +32,14 @@ const rules = {
 const rounds = []
 
 for (let i = 0; i < rules.rounds; i++) {
-  const roundNumber = i + 1
   const { moves } = rules
+  const roundNumber = i + 1
   rounds.push(
     <Round
+      key={i}
       moves={moves}
       players={players}
       roundNumber={roundNumber}
-      key={i}
     />
   )
 }
