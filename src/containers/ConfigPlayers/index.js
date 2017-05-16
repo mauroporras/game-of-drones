@@ -40,7 +40,6 @@ class ConfigPlayers extends React.Component {
   render() {
     return (
       <fieldset className='ConfigPlayers'>
-        <legend className='ConfigPlayers__legend'>Configure Players</legend>
         <form onSubmit={this._onSubmit}>
           <div className='ConfigPlayers__section'>
             <label
