@@ -17,7 +17,10 @@ class PlayerMove extends React.Component {
   }
 
   _setMove(id) {
-    this.setState({ done: true, moveId: id })
+    this.setState({
+      done: true,
+      moveId: id
+    })
   }
 
   render() {
@@ -26,10 +29,10 @@ class PlayerMove extends React.Component {
     )
 
     const pickElement = (
-      <span className='PlayerMove__pick'>Pick a move!</span>
+      <span className='PlayerMove__pick'>Pick a move</span>
     )
 
-    const buttonsMoves = this.props.moves.map(e => (
+    const buttonsElements = this.props.moves.map(e => (
       <ButtonMove
         key={e.id}
         move={e}
@@ -45,7 +48,7 @@ class PlayerMove extends React.Component {
         <div>
           {this.state.done && doneElement}
           {!this.state.done && pickElement}
-          {!this.state.done && buttonsMoves}
+          {!this.state.done && buttonsElements}
         </div>
       </div>
     )

@@ -5,25 +5,34 @@ import './styles.css'
 import SectionTitle from '../SectionTitle/'
 import PlayerMove from '../PlayerMove/'
 
-const Round = props => {
-  const { player1, player2 } = props.players
-  const { moves } = props
+class Round extends React.Component {
+  constructor(props) {
+    super(props)
 
-  return (
-    <div className='Round'>
-      <SectionTitle text={`Round ${props.roundNumber}`} />
-      <div className="Round__moves">
-        <PlayerMove
-          moves={moves}
-          player={player1}
-        />
-        <PlayerMove
-          moves={moves}
-          player={player2}
-        />
+    this.state = {
+    }
+  }
+
+  render() {
+    const { player1, player2 } = this.props.players
+    const { moves, roundNumber } = this.props
+
+    return (
+      <div className='Round'>
+        <SectionTitle text={`Round ${roundNumber}`} />
+        <div className="Round__moves">
+          <PlayerMove
+            moves={moves}
+            player={player1}
+          />
+          <PlayerMove
+            moves={moves}
+            player={player2}
+          />
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default Round
