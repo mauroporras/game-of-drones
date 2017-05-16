@@ -3,6 +3,7 @@
   display: block;
   height: 3rem;
   margin-bottom: 0.5rem;
+  text-transform: capitalize;
   width: 100%;
 }
 
