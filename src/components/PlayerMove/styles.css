@@ -1,5 +1,7 @@
 .PlayerMove {
   border: 0.1rem solid black;
+  box-sizing: border-box;
+  padding: 1rem;
   width: 45%;
 }
 

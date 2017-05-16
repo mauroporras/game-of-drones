@@ -1,5 +1,7 @@
 .ButtonMove {
+  border: 0.1rem solid blue;
   display: block;
+  height: 3rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
