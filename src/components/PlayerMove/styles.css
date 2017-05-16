@@ -8,5 +8,6 @@
 .PlayerMove__player-name {
   display: block;
   font-size: 1.25rem;
+  margin-bottom: 1rem;
   text-align: center;
 }
