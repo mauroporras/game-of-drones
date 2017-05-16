@@ -4,16 +4,52 @@ import ButtonMove from '../ButtonMove/'
 
 import './styles.css'
 
-const PlayerMove = props => {
-  const buttonsMoves = props.moves.map(e => <ButtonMove move={e} key={e.id} />)
-  return (
-    <div className='PlayerMove'>
-      <strong className='PlayerMove__player-name'>{props.player.name}</strong>
-      <div>
-        {buttonsMoves}
+class PlayerMove extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      done: false,
+      moveId: null,
+    }
+
+    this._setMove = this._setMove.bind(this)
+  }
+
+  _setMove(id) {
+    this.setState({ done: true, moveId: id })
+  }
+
+  render() {
+    const doneElement = (
+      <span className='PlayerMove__done'>Done!</span>
+    )
+
+    const pickElement = (
+      <span className='PlayerMove__pick'>Pick a move!</span>
+    )
+
+    const buttonsMoves = this.props.moves.map(e => (
+      <ButtonMove
+        key={e.id}
+        move={e}
+        onClick={this._setMove}
+      />
+    ))
+
+    return (
+      <div className='PlayerMove'>
+        <strong className='PlayerMove__player-name'>
+          {this.props.player.name}
+        </strong>
+        <div>
+          {this.state.done && doneElement}
+          {!this.state.done && pickElement}
+          {!this.state.done && buttonsMoves}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default PlayerMove

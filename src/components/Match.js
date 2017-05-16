@@ -12,7 +12,7 @@ const players = {
   },
 }
 const rules = {
-  rounds: 3,
+  rounds: 1,
   moves: [
     {
       id: 'rock',
