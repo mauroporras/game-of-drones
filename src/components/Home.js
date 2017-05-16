@@ -6,7 +6,7 @@ import ConfigPlayers from './ConfigPlayers/';
 const Home = () => (
   <GameScreen title='New Game'>
     <ConfigPlayers
-      onSubmit={() => console.info('foo')}
+      onSubmit={config => console.info(config)}
     >
     </ConfigPlayers>
   </GameScreen>

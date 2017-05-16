@@ -22,7 +22,7 @@ class ConfigPlayers extends React.Component {
 
   _onSubmit(e) {
     e.preventDefault()
-    this.props.onSubmit()
+    this.props.onSubmit(this.state)
   }
 
   _onChangePlayer1Name(e) {
