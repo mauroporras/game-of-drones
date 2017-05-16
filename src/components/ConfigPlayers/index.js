@@ -12,7 +12,7 @@ class ConfigPlayers extends React.Component {
       },
       player_2: {
         name: '',
-      }
+      },
     }
 
     this._onSubmit = this._onSubmit.bind(this)
