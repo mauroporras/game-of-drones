@@ -29,12 +29,13 @@ const rules = {
   ]
 }
 
-const rounds = []
+const { rounds } = rules
+const roundsElements = []
 
-for (let i = 0; i < rules.rounds; i++) {
+for (let i = 0; i < rounds; i++) {
   const { moves } = rules
   const roundNumber = i + 1
-  rounds.push(
+  roundsElements.push(
     <Round
       key={i}
       moves={moves}
@@ -45,8 +46,8 @@ for (let i = 0; i < rules.rounds; i++) {
 }
 
 const Match = () => (
-  <GameScreen title='Match in Progress'>
-    {rounds}
+  <GameScreen title={`Match in Progress: ${rounds} rounds`}>
+    {roundsElements}
   </GameScreen>
 )
 
