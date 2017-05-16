@@ -15,15 +15,20 @@ class ConfigPlayers extends React.Component {
       }
     }
 
-    this._Player1NameOnChange = this._Player1NameOnChange.bind(this)
-    this._Player2NameOnChange = this._Player2NameOnChange.bind(this)
+    this._onSubmit = this._onSubmit.bind(this)
+    this._onChangePlayer1Name = this._onChangePlayer1Name.bind(this)
+    this._onChangePlayer2Name = this._onChangePlayer2Name.bind(this)
   }
 
-  _Player1NameOnChange(e) {
+  _onSubmit(e) {
+    e.preventDefault()
+  }
+
+  _onChangePlayer1Name(e) {
     this.setState({ player_1: { name: e.target.value } })
   }
 
-  _Player2NameOnChange(e) {
+  _onChangePlayer2Name(e) {
     this.setState({ player_2: { name: e.target.value } })
   }
 
@@ -31,7 +36,7 @@ class ConfigPlayers extends React.Component {
     return (
       <fieldset className='ConfigPlayers'>
         <legend className='ConfigPlayers__legend'>Configure Players</legend>
-        <form>
+        <form onSubmit={this._onSubmit}>
           <div className='ConfigPlayers__section'>
             <label
               className='ConfigPlayers__label'
@@ -42,7 +47,7 @@ class ConfigPlayers extends React.Component {
             <input
               className='ConfigPlayers__input-text'
               id='player1-name'
-              onChange={this._Player1NameOnChange}
+              onChange={this._onChangePlayer1Name}
               placeholder="Player 1's name"
               type='text'
               value={this.state.player_1.name}
@@ -58,7 +63,7 @@ class ConfigPlayers extends React.Component {
             <input
               className='ConfigPlayers__input-text'
               id='player2-name'
-              onChange={this._Player2NameOnChange}
+              onChange={this._onChangePlayer2Name}
               placeholder="Player 2's name"
               type='text'
               value={this.state.player_2.name}
