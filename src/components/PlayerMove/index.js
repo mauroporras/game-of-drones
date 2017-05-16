@@ -16,10 +16,12 @@ class PlayerMove extends React.Component {
     this._setMove = this._setMove.bind(this)
   }
 
-  _setMove(id) {
+  _setMove(moveId) {
     this.setState({
       done: true,
-      moveId: id
+      moveId
+    }, () => {
+      this.props.onPick(moveId)
     })
   }
 

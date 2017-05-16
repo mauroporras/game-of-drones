@@ -16,7 +16,7 @@ exports[`test Component renders the correct children 1`] = `
   <footer
     className="Footer">
     <p>
-      Play fair, have fun!
+      Fair play. Have fun!
     </p>
     <p>
       <a

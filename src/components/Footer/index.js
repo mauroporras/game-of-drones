@@ -5,7 +5,7 @@ import './styles.css'
 const Footer = () => (
   <footer className='Footer'>
     <p>
-      Play fair, have fun!
+      Fair play. Have fun!
     </p>
     <p>
       <a href="https://github.com/mauroporrasp/game-of-drones">Github repo</a>
