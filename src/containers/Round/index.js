@@ -40,9 +40,10 @@ class Round extends React.Component {
       allDone: true
     })
 
+    let winner = null
+    // If it's not a tie, find the winner.
     if (player1.move.id !== player2.move.id) {
-      // If it's not a tie, find the winner.
-      let winner = player1
+      winner = player1
 
       // Find out if Player2 beats Player1.
       if (player2.move.beats.indexOf(player1.move.id) >= 0) {
@@ -53,13 +54,16 @@ class Round extends React.Component {
         result: `${winner.name} is the winner!`
       })
     }
+
+    // Emit winner.
+    this.props.onDone(winner)
   }
 
   render() {
     const { moves, players, roundNumber } = this.props
 
     const roundMovesElement = (
-      <div className="Round__moves">
+      <div className='Round__moves'>
         {
           players.map((e, i) => (
             <PlayerMove

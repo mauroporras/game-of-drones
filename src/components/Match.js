@@ -44,6 +44,7 @@ roundsElements.push(
   <Round
     key={roundNumber}
     moves={moves}
+    onDone={winner => console.info(winner)}
     players={players}
     roundNumber={roundNumber}
   />
