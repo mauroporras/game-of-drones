@@ -7,10 +7,10 @@ class ConfigPlayers extends React.Component {
     super(props)
 
     this.state = {
-      player_1: {
+      player1: {
         name: '',
       },
-      player_2: {
+      player2: {
         name: '',
       },
     }
@@ -26,11 +26,11 @@ class ConfigPlayers extends React.Component {
   }
 
   _onChangePlayer1Name(e) {
-    this.setState({ player_1: { name: e.target.value.trim() } })
+    this.setState({ player1: { name: e.target.value.trim() } })
   }
 
   _onChangePlayer2Name(e) {
-    this.setState({ player_2: { name: e.target.value.trim() } })
+    this.setState({ player2: { name: e.target.value.trim() } })
   }
 
   componentDidMount() {
@@ -40,7 +40,6 @@ class ConfigPlayers extends React.Component {
   render() {
     return (
       <fieldset className='ConfigPlayers'>
-        <legend className='ConfigPlayers__legend'>Configure Players</legend>
         <form onSubmit={this._onSubmit}>
           <div className='ConfigPlayers__section'>
             <label
@@ -57,7 +56,7 @@ class ConfigPlayers extends React.Component {
               ref={input => this.toFocus = input}
               required
               type='text'
-              value={this.state.player_1.name}
+              value={this.state.player1.name}
             />
           </div>
           <div className='ConfigPlayers__section'>
@@ -74,7 +73,7 @@ class ConfigPlayers extends React.Component {
               placeholder="Player 2's name"
               required
               type='text'
-              value={this.state.player_2.name}
+              value={this.state.player2.name}
             />
           </div>
           <div className='ConfigPlayers__section'>

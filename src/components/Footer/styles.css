@@ -1,5 +1,6 @@
 .Footer {
-  color: var(--color-light-gray);
+  color: var(--color-accent);
+  font-family: var(--font-secondary);
   text-align: center;
   font-style: italic;
 }

@@ -4,8 +4,10 @@ import PrimaryTitle from '../PrimaryTitle/'
 import SecondaryTitle from '../SecondaryTitle/'
 import Footer from '../Footer/'
 
+import './styles.css'
+
 const GameScreen = props => (
-  <div>
+  <div className='GameScreen'>
     <header>
       <PrimaryTitle text='Game of Drones' />
       <SecondaryTitle text={props.title} />

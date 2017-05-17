@@ -1,0 +1,23 @@
+.ButtonMove {
+  background-color: var(--color-light-primary);
+  border-radius: var(--border-radius-primary);
+  border-style: none;
+  box-shadow: 0.05rem 0.05rem var(--color-black);
+  display: block;
+  font-family: var(--font-primary);
+  height: 3rem;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  transform: translate(-0.05rem, -0.05rem);
+  width: 100%;
+}
+
+.ButtonMove:active {
+  box-shadow: none;
+  outline: none;
+  transform: translate(0, 0);
+}
+
+.ButtonMove:last-child {
+  margin-bottom: 0;
+}

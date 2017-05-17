@@ -4,16 +4,16 @@ import {
   Route,
 } from 'react-router-dom'
 
-import Home from './components/Home'
-import Play from './components/Play'
+import Home from '../../components/Home/'
+import Match from '../Match/'
 
-import './App.css'
+import './styles.css'
 
 const App = () => (
   <Router>
     <div>
       <Route exact path='/' component={Home} />
-      <Route path='/play' component={Play} />
+      <Route path='/match' component={Match} />
     </div>
   </Router>
 )

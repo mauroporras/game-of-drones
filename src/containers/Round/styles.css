@@ -1,0 +1,32 @@
+.Round {
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-primary);
+  box-shadow: 0.2rem 0.2rem 1rem hsla(0, 0%, 10%, 0.4);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.Round__header {
+  background-color: var(--color-default-primary);
+  padding: 0.5rem 0;
+    border-top-left-radius: var(--border-radius-primary);
+    border-top-right-radius: var(--border-radius-primary);
+}
+
+.Round__title {
+  color: var(--color-white);
+  margin: 0;
+  text-align: center;
+  text-shadow: 0.05rem 0.05rem 0.05rem var(--color-primary-text);
+}
+
+.Round__body {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+}
+
+.Round__result {
+  display: block;
+  text-align: center;
+}

@@ -1,5 +1,5 @@
 .PrimaryTitle {
-  color: var(--color-black);
+  color: var(--color-primary-text);
   margin: 0 0 2rem;
   text-align: center;
 }

@@ -1,0 +1,26 @@
+:root {
+  --color-dark-primary: #689F38;
+  --color-default-primary: #8BC34A;
+  --color-light-primary: #DCEDC8;
+  --color-text-primary: #212121;
+  --color-accent: #9E9E9E;
+  --color-primary-text: #212121;
+  --color-secondary-text: #757575;
+  --color-divider: #BDBDBD;
+
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
+  --border-radius-primary: 0.3rem;
+  --border-radius-secondary: 0.2rem;
+
+  --font-primary: 'Roboto Slab', serif;
+  --font-secondary: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--color-secondary-text);
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/ravenna.png);
+  font-family: var(--font-primary);
+  margin: 1rem;
+}
