@@ -10,6 +10,8 @@ class Match extends React.Component {
     this.state = {
       currentRound: 0,
       roundsElements: [],
+      winners: [],
+      roundsWonToWinMatch: 3,
     }
 
     this._roundDone = this._roundDone.bind(this)
@@ -24,15 +26,12 @@ class Match extends React.Component {
       players: [
         {
           name: 'Nata',
-          roundsWon: 0,
         },
         {
           name: 'Mauro',
-          roundsWon: 0,
         },
       ],
       rules: {
-        roundsWonToWinMatch: 3,
         moves: [
           {
             id: 'rock',
@@ -73,8 +72,24 @@ class Match extends React.Component {
   }
 
   _roundDone(winner) {
-    console.info(winner)
     this._addRound()
+    if (!winner) {
+      return
+    }
+
+    this.setState({
+      winners: [
+        ...this.state.winners,
+        winner
+      ]
+    }, () => this._calculateScores())
+  }
+
+  _calculateScores() {
+    const { winners } = this.state
+    if (winners.length >= this.state.roundsWonToWinMatch) {
+      debugger
+    }
   }
 
   render() {
