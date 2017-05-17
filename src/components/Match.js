@@ -1,4 +1,5 @@
 import React from 'react'
+import R from 'ramda'
 
 import GameScreen from './GameScreen/'
 import Round from '../containers/Round/'
@@ -86,8 +87,11 @@ class Match extends React.Component {
   }
 
   _calculateScores() {
-    const { winners } = this.state
-    if (winners.length >= this.state.roundsWonToWinMatch) {
+    const { winners, roundsWonToWinMatch } = this.state
+    if (winners.length >= roundsWonToWinMatch) {
+      const scores = R.countBy(R.trim)(winners.map(e => e.name))
+      const champion = Object.keys(scores)
+        .find(e => scores[e] >= roundsWonToWinMatch)
       debugger
     }
   }
