@@ -1,0 +1,27 @@
+.PlayerMove {
+  border: 0.1rem solid black;
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 45%;
+}
+
+.PlayerMove__player-name {
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.PlayerMove__instruction {
+  display: block;
+  color: blue;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.PlayerMove__notification {
+  display: block;
+  color: green;
+  margin-bottom: 1rem;
+  text-align: center;
+}

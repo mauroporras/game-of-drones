@@ -3,14 +3,14 @@ import React from 'react'
 import './styles.css'
 
 const ButtonMove = props => {
-  const { id } = props.move
+  const { move } = props
 
   return (
     <button
       className='ButtonMove'
-      onClick={() => props.onClick(id)}
+      onClick={() => props.onClick(move)}
     >
-      {id}
+      {move.id}
     </button>
   )
 }

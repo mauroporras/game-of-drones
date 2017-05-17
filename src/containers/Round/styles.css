@@ -8,3 +8,8 @@
   display: flex;
   justify-content: space-around;
 }
+
+.Round__result {
+  display: block;
+  text-align: center;
+}

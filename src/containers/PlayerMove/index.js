@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ButtonMove from '../ButtonMove/'
+import ButtonMove from '../../components/ButtonMove/'
 
 import './styles.css'
 
@@ -9,29 +9,27 @@ class PlayerMove extends React.Component {
     super(props)
 
     this.state = {
-      done: false,
-      moveId: null,
+      move: null,
     }
 
     this._setMove = this._setMove.bind(this)
   }
 
-  _setMove(moveId) {
+  _setMove(move) {
     this.setState({
-      done: true,
-      moveId
-    }, () => {
-      this.props.onPick(moveId)
+      move
     })
+    // Emit player and their move.
+    this.props.onPick(this.props.player, move)
   }
 
   render() {
-    const doneElement = (
-      <span className='PlayerMove__done'>Done!</span>
+    const notificationElement = (
+      <span className='PlayerMove__notification'>Done!</span>
     )
 
-    const pickElement = (
-      <span className='PlayerMove__pick'>Pick a move</span>
+    const instructionElement = (
+      <span className='PlayerMove__instruction'>Pick a move</span>
     )
 
     const buttonsElements = this.props.moves.map(e => (
@@ -42,16 +40,16 @@ class PlayerMove extends React.Component {
       />
     ))
 
+    const { move } = this.state
+
     return (
       <div className='PlayerMove'>
         <strong className='PlayerMove__player-name'>
           {this.props.player.name}
         </strong>
-        <div>
-          {this.state.done && doneElement}
-          {!this.state.done && pickElement}
-          {!this.state.done && buttonsElements}
-        </div>
+        {move && notificationElement}
+        {!move && instructionElement}
+        {!move && buttonsElements}
       </div>
     )
   }
