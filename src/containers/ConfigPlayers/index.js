@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Dialog from '../../components/Dialog/'
+import Button from '../../components/Button'
+
 import './styles.css'
 
 class ConfigPlayers extends React.Component {
@@ -39,8 +42,8 @@ class ConfigPlayers extends React.Component {
 
   render() {
     return (
-      <fieldset className='ConfigPlayers'>
-        <form onSubmit={this._onSubmit}>
+      <Dialog>
+        <form className='ConfigPlayers__form' onSubmit={this._onSubmit}>
           <div className='ConfigPlayers__section'>
             <label
               className='ConfigPlayers__label'
@@ -77,10 +80,10 @@ class ConfigPlayers extends React.Component {
             />
           </div>
           <div className='ConfigPlayers__section'>
-            <button type='submit'>Play!</button>
+            <Button text='Play!' type='submit' />
           </div>
         </form>
-      </fieldset>
+      </Dialog>
     )
   }
 }

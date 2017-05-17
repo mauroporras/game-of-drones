@@ -1,6 +1,6 @@
 import React from 'react'
 
-import ButtonMove from '../../components/ButtonMove/'
+import Button from '../../components/Button/'
 
 import './styles.css'
 
@@ -33,10 +33,10 @@ class PlayerMove extends React.Component {
     )
 
     const buttonsElements = this.props.moves.map(e => (
-      <ButtonMove
+      <Button
         key={e.id}
-        move={e}
-        onClick={this._setMove}
+        onClick={() => this._setMove(e)}
+        text={e.id}
       />
     ))
 

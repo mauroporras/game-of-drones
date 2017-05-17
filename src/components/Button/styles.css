@@ -1,4 +1,4 @@
-.ButtonMove {
+.Button {
   background-color: var(--color-light-primary);
   border-radius: var(--border-radius-primary);
   border-style: none;
@@ -12,12 +12,12 @@
   width: 100%;
 }
 
-.ButtonMove:active {
+.Button:active {
   box-shadow: none;
   outline: none;
   transform: translate(0, 0);
 }
 
-.ButtonMove:last-child {
+.Button:last-child {
   margin-bottom: 0;
 }

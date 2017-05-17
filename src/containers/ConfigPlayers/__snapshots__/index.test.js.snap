@@ -1,7 +1,8 @@
 exports[`test Component renders correctly 1`] = `
-<fieldset
-  className="ConfigPlayers">
+<div
+  className="Dialog">
   <form
+    className="ConfigPlayers__form"
     onSubmit={[Function]}>
     <div
       className="ConfigPlayers__section">
@@ -38,10 +39,12 @@ exports[`test Component renders correctly 1`] = `
     <div
       className="ConfigPlayers__section">
       <button
+        className="Button"
+        onClick={undefined}
         type="submit">
         Play!
       </button>
     </div>
   </form>
-</fieldset>
+</div>
 `;

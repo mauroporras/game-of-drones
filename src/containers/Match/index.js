@@ -4,6 +4,8 @@ import R from 'ramda'
 import GameScreen from '../../components/GameScreen/'
 import Round from '../Round/'
 
+import './styles.css'
+
 class Match extends React.Component {
   constructor(props) {
     super(props)

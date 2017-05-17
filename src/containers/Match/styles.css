@@ -1,3 +1,6 @@
 .Match__instructions {
-  background-color: var(--color-divider);
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-secondary);
+  font-family: var(--font-secondary);
+  padding: 1rem 2rem;
 }

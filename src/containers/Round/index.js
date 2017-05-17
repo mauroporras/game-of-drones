@@ -2,6 +2,7 @@ import React from 'react'
 
 import './styles.css'
 
+import Dialog from '../../components/Dialog/'
 import PlayerMove from '../PlayerMove/'
 
 class Round extends React.Component {
@@ -77,7 +78,7 @@ class Round extends React.Component {
     )
 
     return (
-      <div className='Round'>
+      <Dialog>
         <div className='Round__header'>
           <h3 className='Round__title'>{`Round ${roundNumber}`}</h3>
         </div>
@@ -85,7 +86,7 @@ class Round extends React.Component {
           {this.state.allDone && resultElement}
           {!this.state.allDone && roundMovesElement}
         </div>
-      </div>
+      </Dialog>
     )
   }
 }

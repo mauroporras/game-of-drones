@@ -1,5 +1,6 @@
 exports[`test Component renders the correct children 1`] = `
-<div>
+<div
+  className="GameScreen">
   <header>
     <h1
       className="PrimaryTitle">
