@@ -59,14 +59,14 @@ class Match extends React.Component {
 
       this.setState({
         roundsElements: [
-          ...this.state.roundsElements,
           <Round
             key={roundNumber}
             moves={moves}
             onDone={this._roundDone}
             players={players}
             roundNumber={roundNumber}
-          />
+          />,
+          ...this.state.roundsElements
         ]
       })
     })
