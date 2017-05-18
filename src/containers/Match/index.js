@@ -133,7 +133,7 @@ class Match extends React.Component {
                 text={`${champion} is the new Emperor!`}
               />
               <Button
-                onClick={() => window.location.reload()}
+                onClick={() => window.location.replace('/')}
                 text='Play Again'
               />
             </div>

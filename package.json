@@ -9,6 +9,7 @@
     "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
+    "nightwatch": "^0.9.15",
     "react-scripts": "0.9.5",
     "react-test-renderer": "^15.5.4"
   },
@@ -16,6 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "e2e": "nightwatch",
     "eject": "react-scripts eject"
   }
 }

@@ -1,7 +1,7 @@
 :root {
   --color-dark-primary: #689F38;
-  --color-default-primary: #8BC34A;
-  --color-light-primary: #DCEDC8;
+  --color-default-primary: #2196F3;
+  --color-light-primary: #CFD8DC;
   --color-text-primary: #212121;
   --color-accent: #9E9E9E;
   --color-primary-text: #212121;
@@ -19,7 +19,6 @@
 }
 
 body {
-  background-color: var(--color-secondary-text);
   background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/ravenna.png);
   font-family: var(--font-primary);
   margin: 1rem;
