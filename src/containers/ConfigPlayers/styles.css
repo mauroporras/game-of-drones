@@ -23,3 +23,9 @@
   text-align: center;
   width: 100%;
 }
+
+.ConfigPlayers__scoreboard-link {
+  color: var(--color-dark-primary);
+  display: block;
+  text-align: center;
+}

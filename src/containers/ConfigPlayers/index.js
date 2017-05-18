@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Link } from 'react-router-dom'
+
 import Dialog from '../../components/Dialog/'
 import Button from '../../components/Button'
 
@@ -95,6 +97,11 @@ class ConfigPlayers extends React.Component {
           </div>
           <div className='ConfigPlayers__section'>
             <Button text='Play!' type='submit' />
+          </div>
+          <div>
+            <Link className='ConfigPlayers__scoreboard-link' to={'/scoreboard'}>
+              Global Scoreboard
+            </Link>
           </div>
         </form>
       </Dialog>

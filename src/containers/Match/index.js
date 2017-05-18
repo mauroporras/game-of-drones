@@ -1,5 +1,6 @@
 import React from 'react'
 import R from 'ramda'
+import axios from 'axios'
 
 import defaultConfig from '../../config/'
 
@@ -97,6 +98,9 @@ class Match extends React.Component {
       this.setState({
         champion,
         gameScreenTitle: null,
+      })
+      axios.post('https://mauroporrasp.cloudant.com/game-of-drones', {
+        name: champion
       })
     } else {
       this._addRound()

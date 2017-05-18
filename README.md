@@ -2,7 +2,7 @@
 ---
 
 
-Watch live at [http://mauroporrasp.github.com](http://mauroporrasp.github.com)
+Watch live at http://mauroporrasp.github.com
 
 This a mobile-first app, and it also looks cool on any device.
 
@@ -15,16 +15,14 @@ for ES2015: https://github.com/rse/es6-features#frequently-asked-questions-faq
 
 ### If you're using Yarn:
 
-Yarn is [the recommended tool.](https://yarnpkg.com/)
+Yarn is [the recommended tool.](https://yarnpkg.com)
 
-1. Install Yarn from
-  [yarnpkg.com/en/docs/install](https://yarnpkg.com/en/docs/install)
-2. Go to the project root.
-3. To install the dependencies, run `yarn install`
-4. To start the project, run `yarn start`
+1. Go to the project root.
+2. To install the dependencies, run `yarn install`
+3. To start the project, run `yarn start`
 
 
-### If you're using npm:
+### If you're not using Yarn:
 
 1. Go to the project root.
 2. To install the dependencies, run `npm install`
@@ -50,7 +48,8 @@ Run `yarn build` or `npm build`
 
 ## Tools used for development
 
-- Architecture: Composite + State, with third party libraries, such as Ramda.
+- Database: [Apache CouchDB](http://couchdb.apache.org/)
+- Architecture: Composite + State, using libraries such as React, Ramda and Axios.
 - Editor: Vim + Emmet & tmux. It can be bootstrapped from here:
   https://github.com/mauroporrasp/dotfiles
 - Dependency management: [Yarn](https://yarnpkg.com/)
@@ -61,6 +60,5 @@ Run `yarn build` or `npm build`
 
 ## I would have used...
 
-- If the exercise were more extense, I would
-  have used Redux. After all,
+- If the exercise was more extense, I would have used Redux. After all,
   [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367)

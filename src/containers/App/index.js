@@ -6,6 +6,7 @@ import {
 
 import Home from '../../components/Home/'
 import Match from '../Match/'
+import ScoreBoard from '../ScoreBoard/'
 
 import './styles.css'
 
@@ -14,6 +15,7 @@ const App = () => (
     <div>
       <Route exact path='/' component={Home} />
       <Route path='/match' component={Match} />
+      <Route path='/scoreboard' component={ScoreBoard} />
     </div>
   </Router>
 )
