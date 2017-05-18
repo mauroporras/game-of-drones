@@ -25,7 +25,12 @@ class ConfigPlayers extends React.Component {
 
   _onSubmit(e) {
     e.preventDefault()
-    this.props.onSubmit(this.state)
+
+    window.localStorage.setItem(
+      'players',
+      JSON.stringify([this.state.player1, this.state.player2])
+    )
+    this.props.onSubmit()
   }
 
   _onChangePlayer1Name(e) {
@@ -38,6 +43,15 @@ class ConfigPlayers extends React.Component {
 
   componentDidMount() {
     this.toFocus.focus()
+
+    let players = window.localStorage.getItem('players')
+    if (players) {
+      players = JSON.parse(players)
+      this.setState({
+        player1: players[0],
+        player2: players[1],
+      })
+    }
   }
 
   render() {

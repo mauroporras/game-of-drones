@@ -4,12 +4,15 @@ import './styles.css'
 
 const Footer = () => (
   <footer className='Footer'>
-    <p>
+    <p className='Footer__paragraph'>
       Fair play. Have fun!
     </p>
-    <p>
-      <a href="https://github.com/mauroporrasp/game-of-drones">Github repo</a>
-    </p>
+      <a
+        className='Footer__link'
+        href="https://github.com/mauroporrasp/game-of-drones"
+      >
+        Github repo
+      </a>
   </footer>
 )
 

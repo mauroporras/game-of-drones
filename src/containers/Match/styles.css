@@ -4,3 +4,7 @@
   font-family: var(--font-secondary);
   padding: 1rem 2rem;
 }
+
+.Match__winner-wrapper {
+  padding: 2rem;
+}
