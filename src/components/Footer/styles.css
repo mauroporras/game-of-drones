@@ -1,6 +1,13 @@
 .Footer {
-  color: var(--color-accent);
   font-family: var(--font-secondary);
   text-align: center;
+}
+
+.Footer__paragraph {
+  color: var(--color-accent);
   font-style: italic;
+}
+
+.Footer__link {
+  color: var(--color-dark-primary);
 }

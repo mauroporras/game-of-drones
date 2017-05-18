@@ -6,7 +6,7 @@ import ConfigPlayers from '../../containers/ConfigPlayers/'
 const Home = props => (
   <GameScreen title='New Game'>
     <ConfigPlayers
-      onSubmit={config => props.history.push('/match')}
+      onSubmit={() => props.history.push('/match')}
     >
     </ConfigPlayers>
   </GameScreen>

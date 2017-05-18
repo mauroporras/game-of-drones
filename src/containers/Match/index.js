@@ -15,25 +15,7 @@ class Match extends React.Component {
       roundsElements: [],
       winners: [],
       roundsWonToWinMatch: 3,
-    }
-
-    this._roundDone = this._roundDone.bind(this)
-  }
-
-  componentDidMount() {
-    this._addRound()
-  }
-
-  _addRound() {
-    const state = {
-      players: [
-        {
-          name: 'Nata',
-        },
-        {
-          name: 'Mauro',
-        },
-      ],
+      players: [],
       rules: {
         moves: [
           {
@@ -52,8 +34,22 @@ class Match extends React.Component {
       },
     }
 
-    const { moves } = state.rules
-    const { players } = state
+    this._roundDone = this._roundDone.bind(this)
+  }
+
+  componentDidMount() {
+    let players = localStorage.getItem('players')
+    if (players) {
+      players = JSON.parse(players)
+      this.setState({
+        players
+      }, () => this._addRound())
+    }
+  }
+
+  _addRound() {
+    const { moves } = this.state.rules
+    const { players } = this.state
     this.setState({
       currentRound: this.state.currentRound + 1
     }, () => {
